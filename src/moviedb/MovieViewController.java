@@ -171,10 +171,10 @@ public class MovieViewController implements Initializable {
             if (favoriteList.exists()) {
 
                 if(isFavorite(msg, favoriteList)){
-                    if(ConfirmBox.display("Attention!","This movie is already in your Favorites!\nDo you want to remove it?")){
+                    if(ConfirmBox.display("Attention!","This is already in your Favorites!\nDo you want to remove it?")){
 
                         File temp = removeFavorite(favoriteList,msg);
-                        if(!favoriteList.delete()) {
+                        if (!favoriteList.delete()) {
                             System.out.println("Favorite list was not deleted!");
                         }
                         temp.renameTo(favoriteList);
@@ -185,6 +185,8 @@ public class MovieViewController implements Initializable {
                     printWriter = new PrintWriter(new FileOutputStream(fileName, true));
                     printWriter.write(msg + newLine);
                     System.out.println("added to file: " + msg);
+                    printWriter.flush();
+                    printWriter.close();
                 }
             }
             else {

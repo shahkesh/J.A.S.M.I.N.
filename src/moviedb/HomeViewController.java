@@ -124,7 +124,7 @@ public class HomeViewController implements Initializable {
         });
 
         //Show favorites
-        if(MovieViewController.favoriteList != null){
+        if(MovieViewController.favoriteList.exists()){
             try {
                 String line;
                 BufferedReader br = new BufferedReader(new FileReader(MovieViewController.favoriteList));
