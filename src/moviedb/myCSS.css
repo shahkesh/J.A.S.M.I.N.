@@ -1,0 +1,77 @@
+.button {
+    -fx-background-color: white;
+    -fx-text-fill: #700000;
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-font-size: 16;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.root {
+    -fx-background-image: url("cinema.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-font-family: "Arial";
+    -fx-font-size: 20;
+}
+
+
+#movieTitle {
+    -fx-font-family: monospace;
+    -fx-font-size: 36;
+    -fx-text-fill:
+            linear-gradient(#ffffff,#700000);
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,255) , 0, 0 , 0 , 0 );
+}
+
+#homeTitle {
+    -fx-font-family: Monospaced;
+    -fx-font-size: 40;
+    -fx-text-fill:
+            linear-gradient(#ffffff,#700000);
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,255) , 0, 0 , 0 , 0 );
+}
+
+#ratingProgressBar {
+    -fx-accent: #700000;
+}
+
+.label {
+    -fx-text-fill: white;
+}
+#ratingLabel {
+    -fx-font-size: 14;
+    -fx-font-family: "Arial";
+}
+.text-area {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-font-family: "Arial";
+}
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-font-family: "Arial";
+}
+.list-view {
+    -fx-background-color: transparent;
+}
+
+#factsTextArea {
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-font-family: "Arial";
+}
