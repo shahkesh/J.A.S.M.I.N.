@@ -311,6 +311,7 @@ public class HomeViewController implements Initializable {
                                     homepage = "not found";
                                 }else{
 
+
                                     File file = new File("MyQRCode.jpeg");
 
                                     QRCodeWriter qrCodeWriter = new QRCodeWriter();
