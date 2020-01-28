@@ -28,7 +28,6 @@ public class Movie {
     public Double voteAverage;
     public Long id;
 
-
     public String getCast2() {
         return cast2;
     }

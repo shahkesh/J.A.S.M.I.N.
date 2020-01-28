@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-Shrek
-Ad Astra
-Will Smith
-=======
-Avatar
-Orlando Bloom
-Frozen
-Shrek
->>>>>>> parent of 6d441ab... commit from intelliJ-Shahram K.
+
+
+1917
+Brad Pitt

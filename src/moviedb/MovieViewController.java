@@ -46,7 +46,6 @@ public class MovieViewController implements Initializable {
     public static File favoriteList = new File(fileName);
     private static final String newLine = System.getProperty("line.separator");
 
-
     public void setMovieObject(){
 
         if(requestedMovie.title.compareTo("TITLE NOT FOUND") == 0){

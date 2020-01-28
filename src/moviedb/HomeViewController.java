@@ -310,8 +310,7 @@ public class HomeViewController implements Initializable {
                                 }else if(homepage.compareTo("") == 0){
                                     homepage = "not found";
                                 }else{
-
-
+                                    
                                     File file = new File("MyQRCode.jpeg");
 
                                     QRCodeWriter qrCodeWriter = new QRCodeWriter();
