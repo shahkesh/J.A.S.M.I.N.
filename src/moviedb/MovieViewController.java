@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -18,7 +19,6 @@ import java.util.ResourceBundle;
 
 public class MovieViewController implements Initializable {
 
-    /*TODO: check if we need these!*/
     @FXML private Button favoritesButton;
     @FXML private Button backButton;
     @FXML private Button trailerButton;
@@ -38,7 +38,7 @@ public class MovieViewController implements Initializable {
     @FXML private Label ratingLabel;
     @FXML private Label deathDateLabel;
     @FXML private Label birthPlaceLabel;
-    @FXML private Label similiarLabel;
+    @FXML private Label similarLabel;
     @FXML private Label actorLabel;
 
     static Movie requestedMovie = new Movie();
@@ -64,7 +64,7 @@ public class MovieViewController implements Initializable {
             movieTitle.setText(requestedMovie.title);
             deathDateLabel.setVisible(false);
             ratingProgressBar.setVisible(false);
-            similiarLabel.setVisible(false);
+            similarLabel.setVisible(false);
             actorLabel.setVisible(false);
 
             // katze!
@@ -84,12 +84,12 @@ public class MovieViewController implements Initializable {
                 poster.setImage(posterImg);
             }
             //similar Movies
-            if(requestedMovie.similiar0 != null){
-                Image similar0IMG = new Image(requestedMovie.similiar0);
+            if(requestedMovie.similar0 != null){
+                Image similar0IMG = new Image(requestedMovie.similar0);
                 similar0.setImage(similar0IMG);
             }
-            if(requestedMovie.similiar1 != null){
-                Image similar1IMG = new Image(requestedMovie.similiar1);
+            if(requestedMovie.similar1 != null){
+                Image similar1IMG = new Image(requestedMovie.similar1);
                 similar1.setImage(similar1IMG);
             }
 
@@ -118,7 +118,7 @@ public class MovieViewController implements Initializable {
 
                 ratingProgressBar.setVisible(false);
                 trailerButton.setVisible(false);
-                similiarLabel.setVisible(false);
+                similarLabel.setVisible(false);
                 actorLabel.setVisible(false);
                 releaseDateLabel.setText("Birthday: ".concat(requestedMovie.birthday));
                 if(requestedMovie.deathday!=null) {
@@ -149,7 +149,7 @@ public class MovieViewController implements Initializable {
         loader.setLocation(getClass().getResource("HomeView.fxml"));
         Parent homeViewParent = loader.load();
 
-        Scene homeViewScene = new Scene(homeViewParent);
+        Scene homeViewScene = new Scene(homeViewParent, 1050, 700);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
         window.setScene(homeViewScene);
@@ -247,15 +247,9 @@ public class MovieViewController implements Initializable {
     @FXML
     public void playTrailerClicked(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("TrailerView.fxml"));
-        Parent trailerViewParent = loader.load();
-
-        Scene trailerViewScene = new Scene(trailerViewParent);
-        TrailerViewController controller = loader.getController();
-
-        controller.loadTrailer(requestedMovie.trailer);
-
+        WebView trailer = new WebView();
+        trailer.getEngine().load(requestedMovie.trailer);
+        Scene trailerViewScene = new Scene(trailer,600,400);
         Stage window = new Stage();
         window.setTitle("Trailer:  " + requestedMovie.title);
         window.setScene(trailerViewScene);

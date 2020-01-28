@@ -21,13 +21,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@myCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moviedb.MovieViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1050.0" stylesheets="@myCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moviedb.MovieViewController">
    <right>
       <VBox BorderPane.alignment="CENTER">
          <children>
-            <StackPane prefHeight="450.0" prefWidth="300.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+            <StackPane prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
                <children>
-                  <ImageView fx:id="poster" fitHeight="450.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="poster" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <StackPane.margin>
                         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                      </StackPane.margin>
@@ -37,20 +37,16 @@
                   <Insets />
                </VBox.margin>
             </StackPane>
-            <ImageView fx:id="poster1" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-               <VBox.margin>
-                  <Insets left="75.0" top="15.0" />
-               </VBox.margin></ImageView>
          </children>
          <BorderPane.margin>
-            <Insets right="30.0" top="60.0" />
+            <Insets right="30.0" top="40.0" />
          </BorderPane.margin>
       </VBox>
    </right>
    <bottom>
       <HBox spacing="15.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="similiarLabel" layoutX="33.0" layoutY="601.0" prefHeight="27.0" prefWidth="150.0" text="Similar Movies:">
+            <Label fx:id="similarLabel" layoutX="33.0" layoutY="601.0" prefHeight="27.0" prefWidth="150.0" text="Similar Movies:">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
@@ -89,7 +85,7 @@
                   <Insets left="20.0" top="20.0" />
                </HBox.margin>
             </Button>
-            <Label fx:id="movieTitle" alignment="CENTER" prefHeight="47.0" text="title" wrapText="true" HBox.hgrow="ALWAYS" StackPane.alignment="CENTER">
+            <Label fx:id="movieTitle" alignment="CENTER" contentDisplay="CENTER" text="title" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS" StackPane.alignment="CENTER">
                <font>
                   <Font name="Impact" size="36.0" />
                </font>
@@ -154,14 +150,14 @@
       </VBox>
    </center>
    <left>
-      <VBox prefWidth="180.0" spacing="15.0" stylesheets="@myCSS.css" BorderPane.alignment="CENTER">
+      <VBox prefWidth="180.0" spacing="10.0" stylesheets="@myCSS.css" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="ratingLabel">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets />
                </VBox.margin>
                <padding>
                   <Insets top="20.0" />
@@ -172,20 +168,30 @@
                <font>
                   <Font name="System Italic" size="14.0" />
                </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
             </Label>
             <Label fx:id="birthPlaceLabel" stylesheets="@myCSS.css" text="Born in:" wrapText="true">
                <font>
                   <Font name="System Italic" size="14.0" />
                </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
             </Label>
             <Label fx:id="deathDateLabel" stylesheets="@myCSS.css" text="Died on:" wrapText="true">
                <font>
                   <Font name="System Italic" size="14.0" />
                </font>
             </Label>
+            <ImageView fx:id="poster1" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></ImageView>
          </children>
          <BorderPane.margin>
-            <Insets left="30.0" top="20.0" />
+            <Insets left="30.0" />
          </BorderPane.margin>
          <padding>
             <Insets top="10.0" />

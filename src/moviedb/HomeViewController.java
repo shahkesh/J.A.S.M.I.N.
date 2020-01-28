@@ -13,6 +13,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -20,6 +24,8 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import java.awt.*;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -38,7 +44,6 @@ public class HomeViewController implements Initializable {
     private TextField movieSearchField;
     @FXML private ListView favoriteListView;
     @FXML private TextArea factsTextArea;
-    @FXML private Label homeTitle;
 
     //Trending movies section:
     @FXML private Label popular0Label;
@@ -50,7 +55,6 @@ public class HomeViewController implements Initializable {
     @FXML private ImageView popular2ImageView;
     @FXML private ImageView popular3ImageView;
 
-
     public static String query;
 
     @FXML
@@ -59,7 +63,7 @@ public class HomeViewController implements Initializable {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("MovieView.fxml"));
         Parent movieViewParent = loader.load();
-
+        
         Scene movieViewScene = new Scene(movieViewParent);
         MovieViewController controller = loader.getController();
         query = (movieSearchField.getText());
@@ -73,8 +77,8 @@ public class HomeViewController implements Initializable {
             controller.requestedMovie.setReleaseDate(releaseDate);
             controller.requestedMovie.setTitle(title);
             controller.requestedMovie.setPoster(posterURL);
-            controller.requestedMovie.setSimiliar0(similar0);
-            controller.requestedMovie.setSimiliar1(similar1);
+            controller.requestedMovie.setSimilar0(similar0);
+            controller.requestedMovie.setSimilar1(similar1);
             controller.requestedMovie.setVoteAverage(voteAverage / 10);
             controller.requestedMovie.setTrailer(key);
             controller.requestedMovie.setBirthday(birthday);
@@ -153,30 +157,6 @@ public class HomeViewController implements Initializable {
         }
     }
 
-    //Funktion um Popular Movies zu befüllen
-    public void fillPopular(){
-
-        if(popular0 != null && populartitle0.compareTo("") != 0){
-            Image popular0IMG = new Image(popular0);
-            popular0ImageView.setImage(popular0IMG);
-            popular0Label.setText(populartitle0);
-        }
-        if(popular1 != null && populartitle1.compareTo("") != 0){
-            Image popular1IMG = new Image(popular1);
-            popular1ImageView.setImage(popular1IMG);
-            popular1Label.setText(populartitle1);
-        }
-        if(popular2 != null && populartitle2.compareTo("") != 0){
-            Image popular2IMG = new Image(popular2);
-            popular2ImageView.setImage(popular2IMG);
-            popular2Label.setText(populartitle2);
-        }
-        if(popular3 != null && populartitle3.compareTo("") != 0){
-            Image popular3IMG = new Image(popular3);
-            popular3ImageView.setImage(popular3IMG);
-            popular3Label.setText(populartitle3);
-        }
-    }
 
     HttpURLConnection con = null;
     public static String title , story, releaseDate, birthday, deathday, placeOfBirth;
@@ -551,6 +531,32 @@ public class HomeViewController implements Initializable {
         }
     }
 
+
+    //Funktion um Popular Movies zu befüllen
+    public void fillPopular(){
+
+        if(popular0 != null && populartitle0.compareTo("") != 0){
+            Image popular0IMG = new Image(popular0);
+            popular0ImageView.setImage(popular0IMG);
+            popular0Label.setText(populartitle0);
+        }
+        if(popular1 != null && populartitle1.compareTo("") != 0){
+            Image popular1IMG = new Image(popular1);
+            popular1ImageView.setImage(popular1IMG);
+            popular1Label.setText(populartitle1);
+        }
+        if(popular2 != null && populartitle2.compareTo("") != 0){
+            Image popular2IMG = new Image(popular2);
+            popular2ImageView.setImage(popular2IMG);
+            popular2Label.setText(populartitle2);
+        }
+        if(popular3 != null && populartitle3.compareTo("") != 0){
+            Image popular3IMG = new Image(popular3);
+            popular3ImageView.setImage(popular3IMG);
+            popular3Label.setText(populartitle3);
+        }
+    }
+
     public void generateQR(String link) throws IOException {
 
         HttpURLConnection con = null;
@@ -647,5 +653,6 @@ public class HomeViewController implements Initializable {
             }
         }
     }
+
 }
 

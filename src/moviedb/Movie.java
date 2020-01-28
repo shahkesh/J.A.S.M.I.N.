@@ -5,8 +5,8 @@ public class Movie {
     public String query;
     public String poster;
     public String poster1;
-    public String similiar0;
-    public String similiar1;
+    public String similar0;
+    public String similar1;
     public String cast0;
     public String cast1;
     public String cast2;
@@ -151,20 +151,20 @@ public class Movie {
     public int mediatype;
 
 
-    public String getSimiliar0() {
-        return similiar0;
+    public String getSimilar0() {
+        return similar0;
     }
 
-    public void setSimiliar0(String similiar0) {
-        this.similiar0 = similiar0;
+    public void setSimilar0(String similar0) {
+        this.similar0 = similar0;
     }
 
-    public String getSimiliar1() {
-        return similiar1;
+    public String getSimilar1() {
+        return similar1;
     }
 
-    public void setSimiliar1(String similiar1) {
-        this.similiar1 = similiar1;
+    public void setSimilar1(String similar1) {
+        this.similar1 = similar1;
     }
 
     public String getPoster1() {

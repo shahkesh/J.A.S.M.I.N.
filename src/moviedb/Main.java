@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("HomeView.fxml"));
         primaryStage.setTitle("JASMIN - Jenny And Shahram's Movie Information Network");
-        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setScene(new Scene(root, 1050, 700));
 
         primaryStage.show();
 
