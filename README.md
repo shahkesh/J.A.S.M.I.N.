@@ -7,6 +7,8 @@ J.A.S.M.I.N
 Movie Search programm within Java FX
 @authors Shahram Keshavarz
 @date 01/2020
+
+
 Brief:
 API wird benützt um nach Filmtiteln, SchauspielerInnen und Serien zu suchen.
 Es werden viele verschiedene Funktionen der API benützt um relevante Informationen
