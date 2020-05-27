@@ -2,8 +2,6 @@
 Java Project with use of API´s and JAVA FX
 
 
-README
-J.A.S.M.I.N
 Movie Search programm within Java FX
 @authors Shahram Keshavarz
 @date 01/2020
