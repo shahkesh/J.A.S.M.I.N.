@@ -1,4 +1,3 @@
-# J.A.S.M.I.N.
 Java Project with use of API´s and JAVA FX
 
 
