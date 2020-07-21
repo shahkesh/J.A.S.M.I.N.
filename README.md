@@ -24,3 +24,6 @@ weitere relevante Funktionen(zb Castanzeige)
 Nicht-Ziele:
 Accounts-Logins
 keine Abgabe von Bewertungen
+
+![alt text](https://github.com/shahkesh/MovieSearch/blob/master/screen1.jpg)
+![alt text](https://github.com/shahkesh/MovieSearch/blob/master/screen2.jpg)
